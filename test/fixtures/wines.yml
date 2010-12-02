@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  slug: MyString
+  name: MyString
+  year: MyString
+  producer: MyString
+  grape: MyString
+  alcohol: 1.5
+  region: MyString
+
+two:
+  slug: MyString
+  name: MyString
+  year: MyString
+  producer: MyString
+  grape: MyString
+  alcohol: 1.5
+  region: MyString
