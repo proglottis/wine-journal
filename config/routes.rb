@@ -2,7 +2,9 @@ WineJournal::Application.routes.draw do
 
   devise_for :users
 
-  resources :wines
+  resources :wines do
+    resources :ratings
+  end
 
   root :to => "home#index"
 

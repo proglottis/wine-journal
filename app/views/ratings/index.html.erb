@@ -1,0 +1,21 @@
+<h1>Listing ratings</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ratings.each do |rating| %>
+  <tr>
+    <td><%= link_to 'Show', [@wine, rating] %></td>
+    <td><%= link_to 'Edit', edit_wine_rating_path(@wine, rating) %></td>
+    <td><%= link_to 'Destroy', [@wine, rating], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rating', new_wine_rating_path %>
