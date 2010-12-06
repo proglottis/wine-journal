@@ -1,5 +1,5 @@
 <h1>Home#index</h1>
 
 <% @ratings.each do |rating| %>
-<div class="box">Nobody rated <%= link_to rating.wine.name, rating.wine %>.</div>
+<div class="box">Nobody rated <%= link_to rating.wine.name, rating.wine %>, <%= time_ago_in_words rating.created_at %> ago.</div>
 <% end %>
