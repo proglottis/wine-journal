@@ -1,5 +1,5 @@
 class Rating < ActiveRecord::Base
-  has_one :wine
+  belongs_to :wine
   has_many :user_ratings
   has_many :users, :through => :user_ratings
 
