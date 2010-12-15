@@ -1,0 +1,15 @@
+<h1>Grapes</h1>
+
+<table>
+<tr>
+  <th>Grape</th>
+  <th>Count</th>
+</tr>
+<% @grapes.each do |grape, count| %>
+<% grape = if grape.empty? then "Unknown" else grape end %>
+<tr>
+  <td><%= link_to grape, grape_path(grape) %></td>
+  <td><%= count %></td>
+</tr>
+<% end %>
+</table>

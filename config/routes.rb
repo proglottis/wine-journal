@@ -5,6 +5,7 @@ WineJournal::Application.routes.draw do
   resources :wines do
     resources :ratings
   end
+  resources :grapes
 
   resource :home
 
