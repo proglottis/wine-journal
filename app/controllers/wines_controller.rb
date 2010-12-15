@@ -4,7 +4,7 @@ class WinesController < ApplicationController
   # GET /wines
   # GET /wines.xml
   def index
-    @wines = Wine.order("name ASC")
+    @wines = Wine.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb

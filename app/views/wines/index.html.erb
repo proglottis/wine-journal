@@ -1,23 +1,8 @@
 <h1>Listing wines</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @wines.each do |wine| %>
-  <tr>
-    <td><%= wine.name %></td>
-    <td><%= link_to 'Show', wine %></td>
-    <td><%= link_to 'Edit', edit_wine_path(wine) %></td>
-    <td><%= link_to 'Destroy', wine, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<div class="box">
+<%= link_to wine.name, wine_path(wine) %> added <%= time_ago_in_words wine.created_at %> ago.
+</div>
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New Wine', new_wine_path %>
