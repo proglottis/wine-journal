@@ -6,9 +6,9 @@ WineJournal::Application.routes.draw do
     resources :ratings
   end
 
-  get "home/index"
+  resource :home
 
-  root :to => "home#index"
+  root :to => "homes#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

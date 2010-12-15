@@ -1,5 +1,5 @@
-class HomeController < ApplicationController
-  def index
+class HomesController < ApplicationController
+  def show
     @ratings = Rating.order("created_at DESC")
   end
 
