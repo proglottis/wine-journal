@@ -1,0 +1,15 @@
+<h1>Regions#index</h1>
+
+<table>
+<tr>
+  <th>Region</th>
+  <th>Count</th>
+</tr>
+<% @regions.each do |region, count| %>
+<% region = if region.empty? then "Unknown" else region end %>
+<tr>
+  <td><%= link_to region, region_path(region) %></td>
+  <td><%= count %></td>
+</tr>
+<% end %>
+</table>

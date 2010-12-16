@@ -6,6 +6,7 @@ WineJournal::Application.routes.draw do
     resources :ratings
   end
   resources :grapes
+  resources :regions
 
   resource :home
 
