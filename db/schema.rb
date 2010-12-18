@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101202054159) do
+ActiveRecord::Schema.define(:version => 20101218234736) do
 
   create_table "ratings", :force => true do |t|
     t.decimal  "cost"
@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(:version => 20101202054159) do
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "wines", :force => true do |t|
-    t.string   "slug",       :null => false
     t.string   "name"
     t.string   "year"
     t.string   "producer"
