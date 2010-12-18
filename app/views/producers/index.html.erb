@@ -1,0 +1,14 @@
+<h1>Producers</h1>
+
+<table>
+  <tr>
+    <th>Producer</th>
+    <th>Count</th>
+  </tr>
+<% @producers.each do |producer, count| %>
+  <tr>
+    <td><%= if producer.empty? then link_to 'Unknown', producer_path('Unknown') else link_to producer, producer_path(producer) end %></td>
+    <td><%= count %></td>
+  </tr>
+<% end %>
+</table>

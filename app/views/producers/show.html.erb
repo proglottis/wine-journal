@@ -1,0 +1,7 @@
+<h1><%= params[:id] %></h1>
+
+<% @wines.each do |wine| %>
+<div class="box">
+<%= link_to wine.name, wine_path(wine) %> added <%= time_ago_in_words wine.created_at %> ago.
+</div>
+<% end %>

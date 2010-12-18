@@ -8,7 +8,7 @@
   </tr>
   <tr>
     <th>Producer</th>
-    <td><%= @wine.producer %></td>
+    <td><%= if @wine.producer.empty? then link_to 'Unknown', producer_path('Unknown') else link_to @wine.producer, producer_path(@wine.producer) end %></td>
   </tr>
   <tr>
     <th>Grape</th>
