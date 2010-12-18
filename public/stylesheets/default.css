@@ -1,3 +1,45 @@
 
+body {
+  background:#ffffff url(/images/top.png) repeat-x;
+}
+
+a:focus,
+a:hover     { color: #f03333; }
+a           { color: #903333; text-decoration: underline; }
+
+.box {
+  background: #eee;
+}
+
+tbody tr:nth-child(even) td, 
+tbody tr.even td  { 
+  background: #eee; 
+}
+
+#title {
+  height:100px;
+}
+
+#title h1 {
+  padding-top:10px;
+  color:#cccccc;
+}
+
+#title h3 {
+  color:#eeeeee;
+}
+
+#menu {
+  height:20px;
+}
+
 #menu ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+#menu ul li {
+  float:left;
+  padding-left:1em;
 }
