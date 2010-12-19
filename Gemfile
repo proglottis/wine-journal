@@ -31,3 +31,4 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # end
 
 gem 'devise'
+gem 'will_paginate', '~> 3.0.pre2'

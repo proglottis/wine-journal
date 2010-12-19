@@ -43,3 +43,20 @@ tbody tr.even td  {
   float:left;
   padding-left:1em;
 }
+
+.pagination {
+  background: #eee;
+  text-align: center;
+  padding: 1em; }
+  .pagination a, .pagination span {
+    padding: .2em .3em; }
+  .pagination span.disabled {
+    color: #AAA; }
+  .pagination em {
+    font-weight: bold;
+  .pagination a {
+    text-decoration: none;
+    color: black; }
+    .pagination a:hover, .pagination a:focus {
+      text-decoration: underline; }
+

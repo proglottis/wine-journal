@@ -4,7 +4,7 @@ class WinesController < ApplicationController
   # GET /wines
   # GET /wines.xml
   def index
-    @wines = Wine.order("created_at desc")
+    @wines = Wine.order("created_at desc").paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
