@@ -8,7 +8,7 @@
 <% @regions.each do |region, count| %>
 <% region = if region.empty? then "Unknown" else region end %>
 <tr>
-  <td><%= link_to region, region_path(region) %></td>
+  <td><%= link_to region, region_path(CGI.escape(region)) %></td>
   <td><%= count %></td>
 </tr>
 <% end %>

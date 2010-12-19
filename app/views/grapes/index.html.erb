@@ -8,7 +8,7 @@
 <% @grapes.each do |grape, count| %>
 <% grape = if grape.empty? then "Unknown" else grape end %>
 <tr>
-  <td><%= link_to grape, grape_path(grape) %></td>
+  <td><%= link_to grape, grape_path(CGI.escape(grape)) %></td>
   <td><%= count %></td>
 </tr>
 <% end %>

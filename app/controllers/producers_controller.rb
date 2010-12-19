@@ -4,6 +4,7 @@ class ProducersController < ApplicationController
   end
 
   def show
+    params[:id] = CGI.unescape(params[:id])
     if params[:id] == 'Unknown' then
       producer = ''
     else
