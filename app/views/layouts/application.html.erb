@@ -25,7 +25,11 @@
 		<li><%= link_to 'Grapes', grapes_path %></li>
 		<li><%= link_to 'Producers', producers_path %></li>
 		<li><%= link_to 'Regions', regions_path %></li>
-		<li class="right"><%= if user_signed_in? then link_to 'Log out', destroy_user_session_path else link_to 'Log in', new_user_session_path end %></li>
+                <% if user_signed_in? then %>
+		<li class="right"><%= current_user.email %> (<%= link_to 'Log out', destroy_user_session_path %>)</li>
+                <% else %>
+		<li class="right"><%= link_to 'Log in', new_user_session_path %></li>
+                <% end %>
 	</ul>
 </div>
 <div class="span-24 last">&nbsp;</div>

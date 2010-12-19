@@ -1,3 +1,6 @@
+<% if user_signed_in? then %>
+<span class="right"><%= link_to 'New', new_wine_path %></span>
+<% end %>
 <h1>Wines</h1>
 
 <% @wines.each do |wine| %>
