@@ -5,6 +5,7 @@ class RatingsController < ApplicationController
   # POST /ratings
   # POST /ratings.xml
   def create
+#    params[:rating][:rank] = Rank.find(params[:rating][:rank])
     @rating = @wine.ratings.new(params[:rating])
 
     respond_to do |format|

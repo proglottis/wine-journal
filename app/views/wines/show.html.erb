@@ -26,7 +26,7 @@
 
 <% @wine.ratings.each do |rating| %>
 <div class="box">
-Nobody rated this wine <%= rating.value %>, <%= time_ago_in_words rating.created_at%> ago.
+Nobody rated this wine <%= link_to rating.rank.name, rating.rank %> <%= time_ago_in_words rating.created_at%> ago.
 </div>
 <% end %>
 

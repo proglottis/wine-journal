@@ -1,5 +1,7 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @rank.name %></h1>
 
-
-<%= link_to 'Edit', edit_rank_path(@rank) %> |
-<%= link_to 'Back', ranks_path %>
+<% @rank.wines.group('id').order('created_at desc').each do |wine| %>
+<div class="box">
+<%= link_to wine.name, wine_path(wine) %> added <%= time_ago_in_words wine.created_at %> ago.
+</div>
+<% end %>

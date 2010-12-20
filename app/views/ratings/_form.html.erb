@@ -16,8 +16,8 @@
 
   <div><%= f.check_box :special %><%= f.label :special %></div>
 
-  <div><%= f.label :value %></div>
-  <div><%= f.text_field :value %></div>
+  <div><%= f.label :rank_id %></div>
+  <div><%= f.select :rank_id, Rank.order('value asc').collect {|r| [r.name, r.id]}, { :prompt => 'Select Rank'} %></div>
 
   <div class="actions">
     <%= f.submit %>
