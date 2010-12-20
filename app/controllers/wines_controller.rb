@@ -4,6 +4,7 @@ class WinesController < ApplicationController
   # GET /wines
   # GET /wines.xml
   def index
+    @wine = Wine.new
     @wines = Wine.order("created_at desc").paginate(:page => params[:page])
 
     respond_to do |format|
@@ -23,17 +24,6 @@ class WinesController < ApplicationController
     end
   end
 
-  # GET /wines/new
-  # GET /wines/new.xml
-  def new
-    @wine = Wine.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @wine }
-    end
-  end
-
   # GET /wines/1/edit
   def edit
     @wine = Wine.find(params[:id])
@@ -43,13 +33,14 @@ class WinesController < ApplicationController
   # POST /wines.xml
   def create
     @wine = Wine.new(params[:wine])
+    @wines = Wine.order("created_at desc").paginate(:page => params[:page])
 
     respond_to do |format|
       if @wine.save
         format.html { redirect_to(@wine, :notice => 'Wine was successfully created.') }
         format.xml  { render :xml => @wine, :status => :created, :location => @wine }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "index" }
         format.xml  { render :xml => @wine.errors, :status => :unprocessable_entity }
       end
     end

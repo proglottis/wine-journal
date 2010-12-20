@@ -1,4 +1,4 @@
-
+<div class="span-18">
 <h1><%= @wine.name %></h1>
 
 <table>
@@ -27,5 +27,14 @@
 <% @wine.ratings.each do |rating| %>
 <div class="box">
 Nobody rated this wine <%= rating.value %>, <%= time_ago_in_words rating.created_at%> ago.
+</div>
+<% end %>
+
+</div>
+
+<% if user_signed_in? then %>
+<div class="span-6 last">
+  <% @rating = Rating.new %>
+  <%= render 'ratings/form' %>
 </div>
 <% end %>

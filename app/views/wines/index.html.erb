@@ -1,6 +1,5 @@
-<% if user_signed_in? then %>
-<span class="right"><%= link_to 'New', new_wine_path %></span>
-<% end %>
+
+<div class="span-18">
 <h1>Wines</h1>
 
 <% @wines.each do |wine| %>
@@ -10,3 +9,10 @@
 <% end %>
 
 <%= will_paginate @wines %>
+</div>
+
+<% if user_signed_in? then %>
+<div class="span-6 last">
+<%= render 'form' %>
+</div>
+<% end %>
