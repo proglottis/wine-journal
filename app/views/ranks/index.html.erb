@@ -1,0 +1,15 @@
+<h1>Ranks</h1>
+
+<table>
+  <tr>
+    <th>Rank</th>
+    <th>Description</th>
+  </tr>
+
+<% @ranks.each do |rank| %>
+  <tr>
+    <td><%= link_to rank.name, rank %></td>
+    <td><%= rank.description %></td>
+  </tr>
+<% end %>
+</table>

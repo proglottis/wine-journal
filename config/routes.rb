@@ -8,6 +8,7 @@ WineJournal::Application.routes.draw do
   resources :grapes
   resources :producers
   resources :regions
+  resources :ranks
 
   resource :home
 

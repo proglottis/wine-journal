@@ -21,10 +21,11 @@
 <div id="menu" class="span-24 last">
 	<ul>
 		<li><%= link_to 'Home', home_path %></li>
-		<li><%= link_to 'Wine', wines_path %></li>
+		<li><%= link_to 'Wines', wines_path %></li>
 		<li><%= link_to 'Grapes', grapes_path %></li>
 		<li><%= link_to 'Producers', producers_path %></li>
 		<li><%= link_to 'Regions', regions_path %></li>
+		<li><%= link_to 'Ranks', ranks_path %></li>
                 <% if user_signed_in? then %>
 		<li class="right"><%= current_user.email %> (<%= link_to 'Log out', destroy_user_session_path %>)</li>
                 <% else %>
