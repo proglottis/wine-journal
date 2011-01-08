@@ -19,6 +19,10 @@
   <div><%= f.label :rank_id %></div>
   <div><%= f.select :rank_id, Rank.order('value asc').collect {|r| [r.name, r.id]}, { :prompt => 'Select Rank'} %></div>
 
+  <% for u in User.order('name') %>
+  <div><%= check_box_tag "rating[user_ids][]", u.id, @rating.users.include?(u) %><%= u.name %></div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

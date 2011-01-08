@@ -24,7 +24,7 @@
   </tr>
 </table>
 
-<% @wine.ratings.each do |rating| %>
+<% @wine.ratings.order('created_at desc').each do |rating| %>
 <div class="box">
 <%= rating.users.order('name').collect{|u| u.name}.join(' and ') %> rated this wine <%= link_to rating.rank.name, rating.rank %> <%= time_ago_in_words rating.created_at%> ago.
 </div>
