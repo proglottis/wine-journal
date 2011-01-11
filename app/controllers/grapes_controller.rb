@@ -1,7 +1,7 @@
 class GrapesController < ApplicationController
 
   def index
-    @grapes = Wine.tag_counts_on(:grapes)
+    @grapes = Wine.tag_counts_on(:grapes).order('name asc')
   end
 
   def show
