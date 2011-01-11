@@ -5,11 +5,10 @@
   <th>Grape</th>
   <th>Count</th>
 </tr>
-<% @grapes.each do |grape, count| %>
-<% grape = if grape.empty? then "Unknown" else grape end %>
+<% @grapes.each do |grape| %>
 <tr>
-  <td><%= link_to grape, grape_path(CGI.escape(grape)) %></td>
-  <td><%= count %></td>
+  <td><%= link_to grape.name, grape_path(grape) %></td>
+  <td><%= grape.count %></td>
 </tr>
 <% end %>
 </table>

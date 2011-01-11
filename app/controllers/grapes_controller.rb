@@ -1,17 +1,12 @@
 class GrapesController < ApplicationController
 
   def index
-    @grapes = Wine.select('grape').group('grape').order('grape asc').count
+    @grapes = Wine.tag_counts_on(:grapes)
   end
 
   def show
-    params[:id] = CGI.unescape(params[:id])
-    if params[:id] == 'Unknown' then
-      grape = ''
-    else
-      grape = params[:id]
-    end
-    @wines = Wine.where(:grape => grape).order('created_at desc')
+    @grape = Wine.tag_counts_on(:grapes).where(:id => params[:id]).first
+    @wines = Wine.tagged_with(@grape.name, :on => :grapes).order('created_at desc')
   end
 
 end

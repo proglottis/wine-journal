@@ -11,8 +11,8 @@
     <td><%= if @wine.producer.empty? then link_to 'Unknown', producer_path('Unknown') else link_to @wine.producer, producer_path(CGI.escape(@wine.producer)) end %></td>
   </tr>
   <tr>
-    <th>Grape</th>
-    <td><%= if @wine.grape.empty? then link_to 'Unknown', grape_path('Unknown') else link_to @wine.grape, grape_path(CGI.escape(@wine.grape)) end %></td>
+    <th>Grapes</th>
+    <td><%= @wine.grape_list %></td>
   </tr>
   <tr>
     <th>Alcohol</th>
