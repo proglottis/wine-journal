@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110110071254) do
+ActiveRecord::Schema.define(:version => 20110110075031) do
 
   create_table "ranks", :force => true do |t|
     t.string   "name"
@@ -77,7 +77,6 @@ ActiveRecord::Schema.define(:version => 20110110071254) do
     t.string   "name"
     t.string   "year"
     t.string   "producer"
-    t.string   "grape"
     t.float    "alcohol"
     t.string   "region"
     t.datetime "created_at"
