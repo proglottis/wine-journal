@@ -1,7 +1,6 @@
 class WinesController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
   autocomplete :wine, :producer
-  autocomplete :wine, :grape_list
   autocomplete :wine, :region
 
   # GET /wines
@@ -75,5 +74,18 @@ class WinesController < ApplicationController
       format.html { redirect_to(wines_url) }
       format.xml  { head :ok }
     end
+  end
+
+  def autocomplete_wine_grape_list
+    method = :name
+    term = params[:term]
+
+    if term && !term.empty?
+      items = Wine.tag_counts_on(:grapes).where(["LOWER(tags.#{method}) LIKE ?", "#{term.downcase}%"]) \
+        .limit(10).order("#{method} ASC")
+    else
+      items = {}
+    end
+    render :json => json_for_autocomplete(items, method)
   end
 end

@@ -21,7 +21,7 @@
   <div><%= f.autocomplete_field :producer, autocomplete_wine_producer_wines_path %></div>
 
   <div><%= f.label :grape_list %></div>
-  <div><%= f.autocomplete_field :grape_list, autocomplete_wine_grape_list_wines_path, 'data-delimiter' => ',' %></div>
+  <div><%= f.autocomplete_field :grape_list, autocomplete_wine_grape_list_wines_path, 'data-delimiter' => ', ' %></div>
 
   <div><%= f.label :alcohol %></div>
   <div><%= f.text_field :alcohol %></div>
