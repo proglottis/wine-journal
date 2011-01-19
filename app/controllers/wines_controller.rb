@@ -1,5 +1,8 @@
 class WinesController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
+  autocomplete :wine, :producer
+  autocomplete :wine, :grape_list
+  autocomplete :wine, :region
 
   # GET /wines
   # GET /wines.xml

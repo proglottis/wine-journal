@@ -18,16 +18,16 @@
   <div><%= f.text_field :year %></div>
 
   <div><%= f.label :producer %></div>
-  <div><%= f.text_field :producer %></div>
+  <div><%= f.autocomplete_field :producer, autocomplete_wine_producer_wines_path %></div>
 
   <div><%= f.label :grape_list %></div>
-  <div><%= f.text_field :grape_list %></div>
+  <div><%= f.autocomplete_field :grape_list, autocomplete_wine_grape_list_wines_path, 'data-delimiter' => ',' %></div>
 
   <div><%= f.label :alcohol %></div>
   <div><%= f.text_field :alcohol %></div>
 
   <div><%= f.label :region %></div>
-  <div><%= f.text_field :region %></div>
+  <div><%= f.autocomplete_field :region, autocomplete_wine_region_wines_path %></div>
 
   <div class="actions">
     <%= f.submit %>

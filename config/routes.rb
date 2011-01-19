@@ -4,6 +4,9 @@ WineJournal::Application.routes.draw do
 
   resources :wines do
     resources :ratings
+    get :autocomplete_wine_producer, :on => :collection
+    get :autocomplete_wine_grape_list, :on => :collection
+    get :autocomplete_wine_region, :on => :collection
   end
   resources :grapes
   resources :producers
