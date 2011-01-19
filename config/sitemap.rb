@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://www.example.com"
+SitemapGenerator::Sitemap.default_host = "http://redwine.nothing.co.nz"
 
 SitemapGenerator::Sitemap.add_links do |sitemap|
   # Put links creation logic here.
@@ -25,4 +25,9 @@ SitemapGenerator::Sitemap.add_links do |sitemap|
   #   Article.find_each do |article|
   #     sitemap.add article_path(article), :lastmod => article.updated_at
   #   end
+
+  Wine.find_each do |w|
+    sitemap.add wine_path(w), :lastmod => w.updated_at
+  end
+
 end
