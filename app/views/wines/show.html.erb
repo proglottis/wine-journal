@@ -14,7 +14,7 @@
   </tr>
   <tr>
     <th>Grapes</th>
-    <td><%= @wine.grape_list %></td>
+    <td><% @wine.grapes.each do |grape| %><%= link_to grape, grape_path(grape) %> <% end %></td>
   </tr>
   <tr>
     <th>Alcohol</th>
