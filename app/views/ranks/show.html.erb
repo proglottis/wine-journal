@@ -1,3 +1,5 @@
+<% content_for :title do %><%= @rank.name %><% end %>
+
 <h1><%= @rank.name %></h1>
 
 <% @rank.wines.group('id').order('created_at desc').each do |wine| %>
