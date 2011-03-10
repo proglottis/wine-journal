@@ -18,11 +18,15 @@
   </tr>
   <tr>
     <th>Alcohol</th>
-    <td><%= if @wine.alcohol then (@wine.alcohol * 100).round else '0' end %>%</td>
+    <td><%= number_to_percentage(@wine.alcohol * 100, :precision => 0) %></td>
   </tr>
   <tr>
     <th>Region</th>
     <td><%= if @wine.region.empty? then link_to 'Unknown', region_path('Unknown') else link_to @wine.region, region_path(CGI.escape(@wine.region)) end %></td>
+  </tr>
+  <tr>
+    <th>Cost</th>
+    <td><%= number_to_currency(@wine.ratings.average('cost'), :unit => 'NZ$') %></td>
   </tr>
 </table>
 
