@@ -1,6 +1,11 @@
+/*
+*= require blueprint/screen
+*= require blueprint/plugins/fancy-type/screen
+*= require_self
+*/
 
 body {
-  background:#ffffff url(/images/top.png) repeat-x;
+  background:#ffffff url(<%= asset_path 'top.png' %>) repeat-x;
 }
 
 a:focus,
