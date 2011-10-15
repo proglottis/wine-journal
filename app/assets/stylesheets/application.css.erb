@@ -9,8 +9,13 @@ body {
 }
 
 a:focus,
-a:hover     { color: #f03333; }
-a           { color: #903333; text-decoration: underline; }
+a:hover {
+  color: #f03333;
+}
+
+a {
+  color: #903333; text-decoration: underline;
+}
 
 .box {
   background: #eee;
@@ -52,16 +57,28 @@ tbody tr.even td  {
 .pagination {
   background: #eee;
   text-align: center;
-  padding: 1em; }
-  .pagination a, .pagination span {
-    padding: .2em .3em; }
-  .pagination span.disabled {
-    color: #AAA; }
-  .pagination em {
-    font-weight: bold;
-  .pagination a {
-    text-decoration: none;
-    color: black; }
-    .pagination a:hover, .pagination a:focus {
-      text-decoration: underline; }
+  padding: 1em;
+}
 
+.pagination a,
+.pagination span {
+  padding: .2em .3em;
+}
+
+.pagination span.disabled {
+  color: #AAA;
+}
+
+.pagination em {
+  font-weight: bold;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: black;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+  text-decoration: underline;
+}
