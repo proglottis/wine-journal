@@ -50,4 +50,5 @@ WineJournal::Application.configure do
   config.assets.compress = true
   config.assets.compile = false
   config.assets.digest = true
+  config.assets.precompile += %w( blueprint/print.css blueprint/ie.css )
 end
