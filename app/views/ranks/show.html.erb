@@ -2,7 +2,7 @@
 
 <h1><%= @rank.name %></h1>
 
-<% @rank.wines.group('id').order('created_at desc').each do |wine| %>
+<% @rank.wines.order('created_at desc').each do |wine| %>
 <div class="box">
 <%= link_to wine.name, wine_path(wine) %> added <%= time_ago_in_words wine.created_at %> ago.
 </div>
