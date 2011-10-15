@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+gem 'rails', '3.1.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -30,9 +30,13 @@ gem 'pg'
 #   gem 'webrat'
 # end
 
+gem 'sass-rails', '~> 3.1.1'
+gem 'coffee-script'
+gem 'uglifier'
+gem 'therubyracer'
+gem 'jquery-rails'
 gem 'devise'
 gem 'will_paginate', '~> 3.0.pre2'
 gem 'acts-as-taggable-on'
-gem 'jquery-rails', '>= 0.2.6'
 gem 'rails3-jquery-autocomplete'
 gem 'sitemap_generator'
