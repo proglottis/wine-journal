@@ -6,7 +6,7 @@ class RatingsController < ApplicationController
     @rating = @wine.ratings.new(rating_params)
 
     if @rating.save
-      redirect_to(wine_url(@wine), :notice => 'Rating was successfully created.') }
+      redirect_to wine_url(@wine), :notice => 'Rating was successfully created.'
     else
       render :action => "new"
     end
