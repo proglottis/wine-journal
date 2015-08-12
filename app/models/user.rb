@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
 
   validates_presence_of :name
 
-  has_many :user_ratings
-  has_many :ratings, :through => :user_ratings
+  has_many :user_ratings, dependent: :destroy
+  has_many :ratings, through: :user_ratings
 end

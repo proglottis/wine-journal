@@ -1,5 +1,5 @@
 class Wine < ActiveRecord::Base
-  has_many :ratings
+  has_many :ratings, dependent: :destroy
 
   validates_presence_of :name
 
