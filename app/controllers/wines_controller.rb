@@ -34,7 +34,7 @@ class WinesController < ApplicationController
   # POST /wines
   # POST /wines.xml
   def create
-    @wine = Wine.new(params[:wine])
+    @wine = Wine.new(wine_params)
     @wines = Wine.order("created_at desc").paginate(:page => params[:page])
 
     respond_to do |format|
@@ -54,7 +54,7 @@ class WinesController < ApplicationController
     @wine = Wine.find(params[:id])
 
     respond_to do |format|
-      if @wine.update_attributes(params[:wine])
+      if @wine.update_attributes(wine_params)
         format.html { redirect_to(@wine, :notice => 'Wine was successfully updated.') }
         format.xml  { head :ok }
       else
@@ -87,5 +87,11 @@ class WinesController < ApplicationController
       items = {}
     end
     render :json => json_for_autocomplete(items, method)
+  end
+
+  private
+
+  def wine_params
+    params.require(:wine).permit(:name, :year, :producer, :alcohol, :region, :grape_list)
   end
 end
