@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.22'
+gem 'rails', '4.2.3'
 
 gem 'pg'
 gem 'capistrano'
@@ -8,7 +8,7 @@ gem 'capistrano'
 gem 'therubyracer', platforms: :ruby
 gem 'libv8', '~> 3.11.8'
 
-gem 'sass-rails', '~> 3.2.6'
+gem 'sass-rails'
 gem 'coffee-script'
 gem 'uglifier'
 
