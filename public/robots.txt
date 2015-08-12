@@ -4,4 +4,4 @@
 # User-Agent: *
 # Disallow: /
 
-Sitemap: http://redwine.nothing.co.nz/sitemap_index.xml.gz
+Sitemap: http://redwine.nothing.co.nz/sitemap.xml.gz
