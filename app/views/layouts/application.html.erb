@@ -11,38 +11,34 @@
 <body>
 <div class="container">
 
-<div id="title" class="span-24 last">
-	<h1>redwine.nothing.co.nz</h1>
-	<h3 class="alt">Anton & James' Wine Archive</h3>
-</div>
+  <div id="title" class="span-24 last">
+    <h1>redwine.nothing.co.nz</h1>
+    <h3 class="alt">Anton & James' Wine Archive</h3>
+  </div>
 
-<div id="menu" class="span-24 last">
-	<ul>
-		<li><%= link_to 'Home', home_path %></li>
-		<li><%= link_to 'Wines', wines_path %></li>
-		<li><%= link_to 'Grapes', grapes_path %></li>
-		<li><%= link_to 'Producers', producers_path %></li>
-		<li><%= link_to 'Regions', regions_path %></li>
-		<li><%= link_to 'Ranks', ranks_path %></li>
-                <% if user_signed_in? then %>
-		<li class="right"><%= current_user.email %> (<%= link_to 'Log out', destroy_user_session_path %>)</li>
-                <% else %>
-		<li class="right"><%= link_to 'Log in', new_user_session_path %></li>
-                <% end %>
-	</ul>
-</div>
-<div class="span-24 last">&nbsp;</div>
+  <div id="menu" class="span-24 last">
+    <ul>
+      <li><%= link_to 'Home', home_path %></li>
+      <li><%= link_to 'Wines', wines_path %></li>
+      <li><%= link_to 'Grapes', grapes_path %></li>
+      <li><%= link_to 'Producers', producers_path %></li>
+      <li><%= link_to 'Regions', regions_path %></li>
+      <li><%= link_to 'Ranks', ranks_path %></li>
+      <% if user_signed_in? then %>
+        <li class="right"><%= current_user.email %> (<%= link_to 'Log out', destroy_user_session_path %>)</li>
+      <% else %>
+        <li class="right"><%= link_to 'Log in', new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="span-24 last">&nbsp;</div>
 
-<div class="span-24 last">
-	<% if flash[:notice] %>
-	<p class="notice"><%= notice %></p>
-	<% end %>
-	<% if flash[:alert] %>
-	<p class="alert"><%= alert %></p>
-	<% end %>
+  <div class="span-24 last">
+    <% if flash[:notice] %><p class="notice"><%= notice %></p><% end %>
+    <% if flash[:alert] %><p class="alert"><%= alert %></p><% end %>
 
-	<%= yield %>
-</div>
+    <%= yield %>
+  </div>
 
 </div>
 </body>
