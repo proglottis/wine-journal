@@ -4,6 +4,8 @@ gem 'rails', '4.2.3'
 
 gem 'pg'
 gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-passenger'
 
 gem 'therubyracer', platforms: :ruby
 gem 'libv8', '~> 3.11.8'
