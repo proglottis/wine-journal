@@ -12,5 +12,4 @@ class ProducersController < ApplicationController
     end
     @wines = Wine.where(:producer => producer).order('created_at desc')
   end
-
 end
